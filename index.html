@@ -184,13 +184,25 @@
 
     //    alert(ehdivisivel(52,2))
 
-    let notasdosemestre=Number(prompt("Quantas notas você quer digitar?")), soma=0
-    var arrnotasdosemestre= [6, 8, 8];
+    // minha tentantiva
+    // let notasdosemestre=Number(prompt("Qual foi sua média na disciplina?")), soma=0
+    // var arrnotasdosemestre= [6, 8, 8];
+    // function media(soma, numeros){
+    //     return media
+    //     for (let index = 0; index >= 1; index++)
+    // }
+    // =====
+
     function media(soma, numeros) {
-        return media
-        for (let index = 0; index >= 1; index++)
+        return soma/numeros;
     }
 
+    let nota =[], quantasnotas = number(prompt("Quantas notas você quer digitar?")), somadasnotas=0
+    for (let index = 1; index <= quantasnotas; index++){
+        notas[index-1]=number(prompt("Qual a "+index+" ª nota?"))
+        // somadasnotas += notas[index-1]
+        somadasnotas = somadasnotas+notas[index-1]
+    }
     </script>
 </body>
 
