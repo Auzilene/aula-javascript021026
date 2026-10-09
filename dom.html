@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,27 +13,120 @@
         }
     </style>
 </head>
+
 <body>
-    <div id="minhadiv"></div>
-<input type="text" name="" id="campo-texto">
-<button id="meu-botao">Mudar Texto </button>
+    <div id="minhadiv">
+        <form action="#" method="post">
+            <input type="text" id="campo-texto">
+            <button id="meu-botao" type="submit">Mudar Texto</button>
+        </form>
+    </div>
     <script>
         // let numero = "SETE"
         let divrosa = document.querySelector("#minhadiv");
+        let textoinput = document.querySelector("#campo-texto")
         console.log(divrosa);
 
-        minhafuncao = function mudartexto(){
-        divrosa.textContent = "MEU TEXTO";    
+        minhafuncao = function mudartexto() {
+            // divrosa.textContent = prompt("Digite o nome desejado:")
+            event.preventDefault();
+            let novadiv = document.createElement("div")
+            divrosa.textContent = textoinput.value;
+            novadiv.classList.add("item-lista")
+            novadiv.style.marginLeft = "30px";
+            divrosa.append(novadiv)
         }
 
-        minhafuncao = function mudartexto() {
-            //divrosa.textContent = prompt("Digite o nome desejado:")
-            divrosa.textContent = textoinput.value;
-        }
-        
         let botao = document.querySelector("#meu-botao")
         console.log(botao);
         botao.addEventListener("click", minhafuncao)
+
+        let alunos = [
+            {
+                nome: "Matheus",
+                idade: 33,
+                curso: "fullcycle",
+                turno: "tarde",
+                data_de_inicio: "09/09/2026",
+            },
+             {
+                nome: "Davi",
+                idade: 19,
+                curso: "fullcycle",
+                turno: "tarde",
+                data_de_inicio: "09/09/2026",
+            },
+             {
+                nome: "Mateus",
+                idade: 26,
+                curso: "fullcycle",
+                turno: "tarde",
+                data_de_inicio: "09/09/2026",
+            },
+             {
+                nome: "Débora",
+                idade: 22,
+                curso: "fullcycle",
+                turno: "tarde",
+                data_de_inicio: "09/09/2026",
+            },
+             {
+                nome: "Leandro",
+                idade: 21,
+                curso: "fullcycle",
+                turno: "tarde",
+                data_de_inicio: "09/09/2026",
+            },
+                {
+                nome: "Gerardo",
+                idade: 25,
+                curso: "fullcycle",
+                turno: "tarde",
+                data_de_inicio: "09/09/2026",
+            },
+
+        ]
+
+        console.log(alunos);
+        // for ( let index = 0; index < alunos.length; index++) {
+        //     alert (alunos [index].nome)
+        // }
+        // let mostrartodososnomes = function mostrarnome(aluno){
+        //     alert(aluno.nome)
+        // }
+        // alunos.forEach(mostrartodososnomes)
+
+        // let listartodososnomes = function filtrarnomes(aluno) {
+        //     return aluno.idade
+        // }
+        // alert(alunos.map(listartodososnomes))
+
+        alert(alunos.map( (aluno)=> aluno.curso ))
+
+        console.log(alunos.filter((aluno)=> aluno.curso == "IA"))
+
+        let aluno = {
+            nome: "Daniel",
+            idade: 15,
+            curso: "fullcycle",
+            turno: "noite",
+            data_de_inicio: "09/09/2026",
+        }
+
+        // alunos[alunos.length] = alunonovo;
+        alunos.push(alunonovo)
+        alunos.push({
+            nome: "Edilson",
+            idade: 30,
+            curso: "fullcycle",
+            turno: "tarde",
+            data_de_inicio: "09/10/2026",
+        })
+        console.log(alunos)
+
+        let alunoexcluido = aluns.pop()
+        console.log(alunoexcluido)
     </script>
 </body>
+
 </html>
